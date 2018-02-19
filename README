@@ -1,0 +1,53 @@
+/*
+ * Filename: README
+ * Author: Yash Nevatia
+ * Userid: cs30xpf
+ * Description:	An interactive program that takes in one or more input files,
+ * merges all the lines from each file, and prints either the duplicate lines
+ * or the distinct lines to stdout. Users can specify the order in which the
+ * files are sorted and merged, and display a count of how many times each line
+ * occurred.
+ * Date: 13 March 2017
+ * Sources of Help
+ */
+
+Compilation: You must be in the pa4 directory and run 'make'. You will need all
+of the following files: buildData.c, compareLines.c, compareLinesIgnoreCase.c,
+displayOutput.c, filenameCompare.s, main.c, mergeFiles.c, pa4.h, pa4Globals.c,
+pa4Strings.h, revFilenameCompare.s, revTimeCompare.s, sortFiles.c, and
+timeCompare.s
+
+How: run ./pa4 with the flags you'd like (D - duplicate, U - unique,
+C - displayCount, I - ignoreCase, R - reverse, S - sort, T - timeCompare,
+H - help ) and then list the files you want to read from 
+
+Output: prints either the duplicate lines or the distinct lines of the files
+passed in to stdout, with the appropriate sorting and/or counter as specified
+by the flags
+
+[cs30xpf@ieng9]:pa4$ ./pa4 file1
+file 1 line 1
+file 1 line 2
+file 1 duplicate line
+
+Erroneous output: (goes to stderr)
+
+[cs30xyz@ieng9]:pa4$ ./pa4 -ud
+
+	Mutually exclusive options were given.
+
+Usage: ./pa4 [-d|-u] [-cirst] [inputfiles]
+       ./pa4 -h for long help
+
+Testing: Some logic-based assembly and C files (filenameCompare,
+revFilenameCompare, timeCompare, revTimeCompare, and sortFiles) were tested
+independently to make sure that their outputs were accurate. These are some of
+the inputs used to make sure that the outputs matched with expectations,
+testing the program.
+
+Normal: ./pa4 file2, ./pa3 -sic file1 file3
+For Errors: ./pa4 -i badFile, ./pa4 z
+
+Questions:
+1. Reccomend they access the tutors that are avalible and point them to notes
+from class and piazza posts that discuss the things they don't understand.
